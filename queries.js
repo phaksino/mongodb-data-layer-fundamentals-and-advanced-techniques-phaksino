@@ -2,7 +2,7 @@ const { MongoClient } = require('mongodb');
 
 class BookQueries {
     constructor() {
-        this.uri = "mongodb://127.0.0.1:27017/library";
+        this.uri = "mongodb://127.0.0.1:27017/plp_bookstore";
         this.client = new MongoClient(this.uri);
         this.database = null;
         this.books = null;
@@ -12,7 +12,7 @@ class BookQueries {
         try {
             await this.client.connect();
             console.log("✅ Connected to MongoDB successfully\n");
-            this.database = this.client.db('library');
+            this.database = this.client.db('plp_bookstore');
             this.books = this.database.collection('books');
             return true;
         } catch (error) {
