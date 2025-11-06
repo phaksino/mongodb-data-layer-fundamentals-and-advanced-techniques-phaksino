@@ -11,4 +11,4 @@ This project demonstrates MongoDB CRUD operations, advanced queries, aggregation
 ## 🛠️ Setup
 
 1. **Install dependencies:**
-   ```bash
+npm install mongodb
